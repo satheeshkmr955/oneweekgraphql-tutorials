@@ -1,0 +1,23 @@
+version: "3.1"
+services:
+  graphql_mysql:
+    image: mysql
+    container_name: graphql_mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: example
+      MYSQL_DATABASE: graphql
+    volumes:
+      - graphql_data:/var/lib/mysql
+    ports:
+      - "3307:3306"
+
+  graphql_adminer:
+    image: adminer
+    container_name: graphql_adminer
+    restart: always
+    ports:
+      - 8080:8080
+
+volumes:
+  graphql_data:

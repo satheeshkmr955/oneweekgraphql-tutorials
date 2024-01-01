@@ -1,0 +1,22 @@
+prisma -D
+prisma/client
+graphql-yoga
+@graphql-codegen/cli
+graphql
+----------------
+tailwindcss -D
+zustand(RTK)                        state management?
+shadcd-ui
+react-query (as graphql-client)
+axios               
+usehooks-ts?
+zod                                 validation ?
+-----------------
+lodash?
+@types/lodash -D
+-----------------
+package.script
+    "codegen": "graphql-codegen --config codegen.ts",
+    "db:generate": "prisma generate",
+    "db:migrate": "prisma migrate dev",
+    "db:studio": "prisma studio"
